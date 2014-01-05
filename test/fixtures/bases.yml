@@ -1,0 +1,24 @@
+
+one: 
+  name: "Camp Pendleton"
+  street: "123 Main St."
+  city: "Oceanside"
+  state: "CA"
+  zipcode: 92231
+  latitude: 38.1232
+  longitude: 117.3234
+  url: 
+  image: 
+  branch: two
+
+two: 
+  name: Fort Bragg
+  street: "123 Army St."
+  city: "Fayetteville"
+  state: "NC"
+  zipcode: 28310
+  latitude: 32.3423
+  longitude: 119.4323
+  url:
+  image:
+  branch: one
