@@ -3,6 +3,7 @@ one:
   street: "123 Main St."
   city: "Oceanside"
   state: "CA"
+  operator_number: "317-753-3648"
   zipcode: 92231
   latitude: 38.1232
   longitude: 117.3234

@@ -97,4 +97,8 @@ class BaseTest < ActiveSupport::TestCase
     refute bases(:one).valid?
   end
 
+  test "operator number must be in a certain format" do 
+    skip
+  end
+
 end
