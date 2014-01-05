@@ -18,4 +18,8 @@ class BranchTest < ActiveSupport::TestCase
     assert branches(:one).valid?
   end
 
+  # test "it can have bases associated with it" do 
+  #   assert_equal bases(:one), branches(:two).bases.first
+  # end
+
 end

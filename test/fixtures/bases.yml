@@ -1,4 +1,3 @@
-
 one: 
   name: "Camp Pendleton"
   street: "123 Main St."
@@ -9,10 +8,10 @@ one:
   longitude: 117.3234
   url: 
   image: 
-  branch: two
+  branch_id: branches(:two).id
 
 two: 
-  name: Fort Bragg
+  name: "Fort Bragg"
   street: "123 Army St."
   city: "Fayetteville"
   state: "NC"
@@ -21,4 +20,4 @@ two:
   longitude: 119.4323
   url:
   image:
-  branch: one
+  branch_id: branches(:one).id
