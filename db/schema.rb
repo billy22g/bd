@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140105215224) do
+ActiveRecord::Schema.define(version: 20140105221340) do
 
   create_table "bases", force: true do |t|
     t.string   "name"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20140105215224) do
     t.datetime "updated_at"
     t.string   "operator_number"
   end
+
+  add_index "bases", ["branch_id"], name: "index_bases_on_branch_id"
 
   create_table "branches", force: true do |t|
     t.string "name"
