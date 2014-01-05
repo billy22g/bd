@@ -8,16 +8,16 @@ one:
   longitude: 117.3234
   url: 
   image: 
-  branch_id: branches(:two).id
-
-two: 
-  name: "Fort Bragg"
-  street: "123 Army St."
-  city: "Fayetteville"
-  state: "NC"
-  zipcode: 28310
-  latitude: 32.3423
-  longitude: 119.4323
-  url:
-  image:
   branch_id: branches(:one).id
+
+# two: 
+#   name: "Fort Bragg"
+#   street: "123 Army St."
+#   city: "Fayetteville"
+#   state: "NC"
+#   zipcode: 28310
+#   latitude: 32.3423
+#   longitude: 119.4323
+#   url:
+#   image:
+#   branch_id: branches(:one).id
