@@ -7,7 +7,7 @@ one:
   zipcode: 92231
   latitude: 38.1232
   longitude: 117.3234
-  url: 
+  url: "http://www.pendleton.marines.mil/"
   image: 
   branch_id: branches(:one).id
 
