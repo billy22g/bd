@@ -6,8 +6,7 @@ class EstablishmentTest < ActiveSupport::TestCase
     assert establishments(:one).valid?
   end
 
-  test "it can have bases associated with it" do 
-    skip
+  test "it can have phone numbers associated with it" do 
     assert_includes establishments(:one).phone_numbers, phone_numbers(:one)
   end
 end
