@@ -20,7 +20,6 @@ class BranchTest < ActiveSupport::TestCase
   end
 
   test "it can have bases associated with it" do 
-    skip
     assert_includes branches(:one).bases, bases(:one)
   end
 

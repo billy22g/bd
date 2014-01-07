@@ -9,7 +9,7 @@ one:
   longitude: 117.3234
   url: "http://www.pendleton.marines.mil/"
   image: 
-  branch_id: branches(:one).id
+  branch: one
 
 # two: 
 #   name: "Fort Bragg"
