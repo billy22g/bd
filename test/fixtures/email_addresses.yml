@@ -1,0 +1,5 @@
+one:
+  email: "commissary@example.com"
+  description: "Email"
+  establishment: one
+
