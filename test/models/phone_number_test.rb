@@ -12,4 +12,8 @@ class PhoneNumberTest < ActiveSupport::TestCase
     refute phone_numbers(:one).valid?
   end
 
+  test "it is invalid without being formatted properly" do 
+    skip
+  end
+
 end
