@@ -4,5 +4,6 @@ class PhoneNumber < ActiveRecord::Base
 
   #validations
   validates :number, presence: true
+  validates :description, presence: true
   validates :establishment_id, presence: true
 end

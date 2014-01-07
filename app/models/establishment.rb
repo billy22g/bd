@@ -1,6 +1,7 @@
 class Establishment < ActiveRecord::Base
   #relationships
   has_many :phone_numbers 
+  has_many :email_addresses
   
   #validations
   validates :name, presence: true

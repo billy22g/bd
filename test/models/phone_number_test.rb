@@ -7,6 +7,11 @@ class PhoneNumberTest < ActiveSupport::TestCase
     refute phone_numbers(:one).valid?
   end
 
+  test "it is invalid without a description" do 
+    phone_numbers(:one).update(:description => nil)
+    refute phone_numbers(:one).valid?
+  end
+
   test "it is invalid without belonging to an establishment" do 
     phone_numbers(:one).update(:establishment_id => nil)
     refute phone_numbers(:one).valid?

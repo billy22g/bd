@@ -11,9 +11,13 @@ class EstablishmentTest < ActiveSupport::TestCase
     refute establishments(:one).valid?
   end
 
-  test "it is invalid without being associated with a category" do
+  test "it is invalid without a category id" do 
     establishments(:one).update(:category_id => nil)
     refute establishments(:one).valid?
+  end
+
+  test "it is invalid without being associated with a category" do
+    skip
   end
 
   test "the state is invalid unless it is two capital letters" do 
@@ -35,6 +39,10 @@ class EstablishmentTest < ActiveSupport::TestCase
 
   test "it can have phone numbers associated with it" do 
     assert_includes establishments(:one).phone_numbers, phone_numbers(:one)
+  end
+
+  test "it can have email addresses associated with it" do 
+    assert_includes establishments(:one).email_addresses, email_addresses(:one)
   end
 end
 
