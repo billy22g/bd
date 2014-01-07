@@ -1,4 +1,6 @@
 one:
   number: "555-555-5555"
+  description: "Phone"
+  establishment_id: 1
 # two:
 

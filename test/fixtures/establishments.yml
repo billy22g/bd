@@ -2,7 +2,16 @@
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
+  name: "Sample Commissary"
+  category_id: 1
+  street1: "123 Main St."
+  street2: "Bldg 424"
+  city: "Camp Pendleton"
+  state: "CA"
+  zipcode: 92113
+  latitude: 38.3424
+  longitude: 117.2312
+  description: "This is the best place on earth. You can get everything from Florida's Orange Juice to Nevada's Apples!"
 
-two:
-  name: MyString
+# two:
+#   name: MyString
