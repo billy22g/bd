@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140107034823) do
+ActiveRecord::Schema.define(version: 20140107035523) do
 
   create_table "bases", force: true do |t|
     t.string   "name"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 20140107034823) do
     t.datetime "updated_at"
   end
 
+  add_index "email_addresses", ["establishment_id"], name: "index_email_addresses_on_establishment_id"
+
   create_table "establishments", force: true do |t|
     t.string   "name"
     t.integer  "category_id"
@@ -65,5 +67,7 @@ ActiveRecord::Schema.define(version: 20140107034823) do
     t.datetime "updated_at"
     t.string   "description"
   end
+
+  add_index "phone_numbers", ["establishment_id"], name: "index_phone_numbers_on_establishment_id"
 
 end
