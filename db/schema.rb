@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140108025741) do
+ActiveRecord::Schema.define(version: 20140108032240) do
 
   create_table "bases", force: true do |t|
     t.string   "name"
@@ -77,5 +77,7 @@ ActiveRecord::Schema.define(version: 20140108025741) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "websites", ["establishment_id"], name: "index_websites_on_establishment_id"
 
 end
