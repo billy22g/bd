@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140108033232) do
+ActiveRecord::Schema.define(version: 20140108033345) do
 
   create_table "bases", force: true do |t|
     t.string   "name"
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 20140108033232) do
   create_table "websites", force: true do |t|
     t.string   "url"
     t.integer  "establishment_id"
-    t.string   "description"
+    t.string   "description",      default: "Website"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
