@@ -44,5 +44,10 @@ class EstablishmentTest < ActiveSupport::TestCase
   test "it can have email addresses associated with it" do 
     assert_includes establishments(:one).email_addresses, email_addresses(:one)
   end
+
+  test "it can have websites associated with it" do
+    assert_includes establishments(:one).websites, websites(:one)
+    assert_includes establishments(:one).websites, websites(:two)
+  end
 end
 
