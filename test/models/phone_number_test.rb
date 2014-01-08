@@ -12,6 +12,11 @@ class PhoneNumberTest < ActiveSupport::TestCase
     refute phone_numbers(:one).valid?
   end
 
+  test "its description defaults to Phone" do 
+    number = PhoneNumber.new
+    assert_equal "Phone", number.description
+  end
+
   test "it is invalid without belonging to an establishment" do 
     phone_numbers(:one).update(:establishment_id => nil)
     refute phone_numbers(:one).valid?

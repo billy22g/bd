@@ -12,6 +12,11 @@ class EmailAddressTest < ActiveSupport::TestCase
     refute email_addresses(:one).valid?
   end
 
+  test "its description defaults to Email" do 
+    email = EmailAddress.new
+    assert_equal "Email", email.description
+  end
+
   test "it is invalid without belonging to an establishment" do 
     email_addresses(:one).update(:establishment_id => nil)
     refute email_addresses(:one).valid?
