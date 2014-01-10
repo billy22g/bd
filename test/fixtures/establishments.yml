@@ -10,7 +10,7 @@ one:
   state: "CA"
   zipcode: 92113
   latitude: 38.3424
-  longitude: 117.2312
+  longitude: 117.2131
   description: "This is the best place on earth. You can get everything from Florida's Orange Juice to Nevada's Apples!"
 
 two:
@@ -23,4 +23,4 @@ two:
   zipcode: 92113
   latitude: 38.9999
   longitude: 117.1123
-  description: "It's a pretty cool exchange.""
+  description: "It's a pretty cool exchange."
