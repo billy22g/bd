@@ -1,7 +1,9 @@
 require "test_helper"
 
 class ReviewTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "it must belong to a user" do 
+    skip
+  end
+
 end

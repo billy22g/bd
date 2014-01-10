@@ -13,5 +13,14 @@ one:
   longitude: 117.2312
   description: "This is the best place on earth. You can get everything from Florida's Orange Juice to Nevada's Apples!"
 
-# two:
-#   name: MyString
+two:
+  name: "Sample Exchange"
+  category_id: 1
+  street1: "456 Wonder St."
+  street2: "Bldg 976"
+  city: "Camp Pendleton"
+  state: "CA"
+  zipcode: 92113
+  latitude: 38.9999
+  longitude: 117.1123
+  description: "It's a pretty cool exchange.""
