@@ -1,6 +1,5 @@
 require 'test_helper'
 
-
 class BranchTest < ActiveSupport::TestCase
 
   test "it is created with valid attributes" do 
@@ -21,6 +20,7 @@ class BranchTest < ActiveSupport::TestCase
 
   test "it can have bases associated with it" do 
     assert_includes branches(:one).bases, bases(:one)
+    assert_includes branches(:two).bases, bases(:two)
   end
 
 end

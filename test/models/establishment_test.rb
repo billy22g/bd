@@ -39,15 +39,22 @@ class EstablishmentTest < ActiveSupport::TestCase
 
   test "it can have phone numbers associated with it" do 
     assert_includes establishments(:one).phone_numbers, phone_numbers(:one)
+    assert_includes establishments(:one).phone_numbers, phone_numbers(:two)
   end
 
   test "it can have email addresses associated with it" do 
     assert_includes establishments(:one).email_addresses, email_addresses(:one)
+    assert_includes establishments(:one).email_addresses, email_addresses(:two)
   end
 
   test "it can have websites associated with it" do
     assert_includes establishments(:one).websites, websites(:one)
     assert_includes establishments(:one).websites, websites(:two)
+  end
+
+  test "it can have reviews associated with it" do 
+    assert_includes establishments(:one).reviews, reviews(:one)
+    assert_includes establishments(:one).reviews, reviews(:two)
   end
 end
 

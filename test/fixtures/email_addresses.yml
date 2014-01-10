@@ -3,3 +3,8 @@ one:
   description: "Email"
   establishment: one
 
+two: 
+  email: "manager@example.com"
+  description: "Manager Email"
+  establishment: one
+
