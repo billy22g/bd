@@ -11,6 +11,11 @@ class BranchTest < ActiveSupport::TestCase
     refute branches(:one).valid?
   end
 
+  test "its name must be unique" do 
+    branches(:two).name = "Marines"
+    refute branches(:two).valid?
+  end
+
   test "it validates that the name is an actual branch" do
     branches(:one).name = "Invalid"
     refute branches(:one).valid?
