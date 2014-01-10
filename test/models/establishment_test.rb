@@ -60,5 +60,9 @@ class EstablishmentTest < ActiveSupport::TestCase
     assert_includes establishments(:one).reviews, reviews(:one)
     assert_includes establishments(:one).reviews, reviews(:two)
   end
+
+  test "it must be on one or more bases" do 
+    skip
+  end
 end
 
