@@ -3,6 +3,6 @@ class User < ActiveRecord::Base
   belongs_to :base
 
   #validations
-  validates :username, presence: true
+  validates :username, presence: true, uniqueness: true
   validates :email, presence: true
 end
