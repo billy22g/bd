@@ -10,4 +10,8 @@ class ReviewTest < ActiveSupport::TestCase
     refute reviews(:one).valid?
   end
 
+  test "a user cannot leave multiple reviews for a single establishment" do
+    skip
+  end
+
 end

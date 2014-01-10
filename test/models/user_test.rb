@@ -22,6 +22,11 @@ class UserTest < ActiveSupport::TestCase
     refute invalid_user.valid?
   end
 
+  test "it can have reviews for establishments" do 
+    assert_includes users(:one).reviews, reviews(:one)
+    assert_includes users(:one).reviews, reviews(:three)
+  end
+
   test "that a users email must be in a valid format" do 
     skip
   end

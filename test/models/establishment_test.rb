@@ -16,7 +16,11 @@ class EstablishmentTest < ActiveSupport::TestCase
     refute establishments(:one).valid?
   end
 
-  test "it is invalid without being associated with a category" do
+  test "it is invalid without being in at least one category" do
+    skip
+  end
+
+  test "it can be included in more than one category" do 
     skip
   end
 
