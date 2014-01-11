@@ -2,6 +2,18 @@ require "test_helper"
 
 class EstablishmentTest < ActiveSupport::TestCase
 
+  should have_many(:websites)
+  should have_many(:phone_numbers)
+  should have_many(:email_addresses)
+  should have_many(:reviews)
+
+  should have_many(:base_establishments)
+  should have_many(:bases)
+
+  should validate_presence_of(:name)
+  should validate_presence_of(:category_id)
+  should validate_numericality_of(:category_id)
+
   test "it is created with valid attributes" do 
     assert establishments(:one).valid?
   end
@@ -62,6 +74,26 @@ class EstablishmentTest < ActiveSupport::TestCase
   end
 
   test "it must be on one or more bases" do 
+    skip
+  end
+
+  test "it validates format of latitude" do 
+    skip
+  end
+
+  test "it validates format of longitude" do 
+    skip
+  end
+
+  test "it validates format of street1" do 
+    skip
+  end
+
+  test "it validates format of street2" do 
+    skip
+  end
+
+  test "it validates format of city" do 
     skip
   end
 end

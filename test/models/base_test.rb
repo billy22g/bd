@@ -116,9 +116,4 @@ class BaseTest < ActiveSupport::TestCase
     skip
   end
 
-  test "it can have multiple establishments" do 
-    skip 
-    # This will be implemented through base_establishments and has_many through relationship
-  end
-
 end
