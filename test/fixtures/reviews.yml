@@ -1,17 +1,17 @@
 one:
   rating: 1
-  review: "This place sucked!"
+  text: "This place sucked!"
   user: one
   establishment: one
 
 two: 
   rating: 5
-  review: "I loved this place! It was amazing and had everything!"
+  text: "I loved this place! It was amazing and had everything!"
   user: two
   establishment: one
 
 three: 
   rating: 5
-  review: "I loved this place! It was amazing and had everything!"
+  text: "I loved this place! It was amazing and had everything!"
   user: one
   establishment: two
