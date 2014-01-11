@@ -1,6 +1,13 @@
 require "test_helper"
 
 class WebsiteTest < ActiveSupport::TestCase
+
+  should belong_to(:establishment)
+
+  should validate_presence_of(:url)
+  should validate_presence_of(:description)
+  should validate_presence_of(:establishment_id)
+
   test "it is invalid without a url" do
     websites(:one).update(:url => nil)
     refute websites(:one).valid?
