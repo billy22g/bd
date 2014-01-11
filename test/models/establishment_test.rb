@@ -10,6 +10,9 @@ class EstablishmentTest < ActiveSupport::TestCase
   should have_many(:base_establishments)
   should have_many(:bases)
 
+  should have_many(:establishment_categories)
+  should have_many(:categories)
+
   should validate_presence_of(:name)
   should validate_presence_of(:category_id)
   should validate_numericality_of(:category_id)

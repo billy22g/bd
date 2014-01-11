@@ -6,6 +6,8 @@ class Establishment < ActiveRecord::Base
   has_many :reviews
   has_many :base_establishments
   has_many :bases, through: :base_establishments
+  has_many :establishment_categories
+  has_many :categories, through: :establishment_categories
   
   #validations
   validates :name, presence: true
