@@ -21,6 +21,7 @@ end
 group :test do 
   gem 'shoulda-matchers'
   gem 'shoulda'
+  gem 'simplecov', :require => false
 end
 
 group :doc do
