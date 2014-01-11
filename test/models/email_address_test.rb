@@ -3,8 +3,10 @@ require "test_helper"
 class EmailAddressTest < ActiveSupport::TestCase
 
   should belong_to(:establishment)
+
   should validate_presence_of(:email)
   should validate_presence_of(:description)
+  should validate_presence_of(:establishment_id)
 
   test "it is invalid without an email" do
     email_addresses(:one).update(:email => nil)

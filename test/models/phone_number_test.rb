@@ -1,7 +1,13 @@
 require "test_helper"
 
 class PhoneNumberTest < ActiveSupport::TestCase
-  
+
+  should belong_to(:establishment)
+
+  should validate_presence_of(:number)
+  should validate_presence_of(:description)
+  should validate_presence_of(:establishment_id)
+
   test "it is invalid without a number" do
     phone_numbers(:one).update(:number => nil)
     refute phone_numbers(:one).valid?
