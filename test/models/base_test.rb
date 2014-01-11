@@ -4,7 +4,8 @@ class BaseTest < ActiveSupport::TestCase
 
   should belong_to(:branch)
   should have_many(:users)
-  # should have_many(:establishments)
+  should have_many(:base_establishments)
+  should have_many(:establishments)
 
   should validate_presence_of(:name)
   should validate_presence_of(:state)
