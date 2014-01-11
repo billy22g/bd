@@ -1,6 +1,7 @@
 class Base < ActiveRecord::Base
   #relationships
   belongs_to :branch
+  has_many :users
 
   #validations
   validates :name, presence: true

@@ -2,7 +2,19 @@ require "test_helper"
 
 class BaseTest < ActiveSupport::TestCase
 
+  should belong_to(:branch)
+  should have_many(:users)
   # should have_many(:establishments)
+
+  should validate_presence_of(:name)
+  should validate_presence_of(:state)
+  should validate_presence_of(:zipcode)
+  should validate_numericality_of(:zipcode)
+  should validate_presence_of(:latitude)
+  should validate_numericality_of(:latitude)
+  should validate_presence_of(:longitude)
+  should validate_numericality_of(:longitude)
+
   
   test "it is created with valid attributes" do 
     assert bases(:one).valid?
