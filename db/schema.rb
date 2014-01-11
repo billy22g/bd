@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140111075558) do
+ActiveRecord::Schema.define(version: 20140111080352) do
 
   create_table "base_establishments", force: true do |t|
     t.integer  "base_id"
@@ -60,6 +60,16 @@ ActiveRecord::Schema.define(version: 20140111075558) do
   end
 
   add_index "email_addresses", ["establishment_id"], name: "index_email_addresses_on_establishment_id"
+
+  create_table "establishment_categories", force: true do |t|
+    t.integer  "establishment_id"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "establishment_categories", ["category_id"], name: "index_establishment_categories_on_category_id"
+  add_index "establishment_categories", ["establishment_id"], name: "index_establishment_categories_on_establishment_id"
 
   create_table "establishments", force: true do |t|
     t.string   "name"
