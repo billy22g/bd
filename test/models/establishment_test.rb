@@ -14,8 +14,6 @@ class EstablishmentTest < ActiveSupport::TestCase
   should have_many(:categories)
 
   should validate_presence_of(:name)
-  should validate_presence_of(:category_id)
-  should validate_numericality_of(:category_id)
 
   test "it is created with valid attributes" do 
     assert establishments(:one).valid?
@@ -23,11 +21,6 @@ class EstablishmentTest < ActiveSupport::TestCase
 
   test "it is invalid without a name" do
     establishments(:one).update(:name => nil)
-    refute establishments(:one).valid?
-  end
-
-  test "it is invalid without a category id" do 
-    establishments(:one).update(:category_id => nil)
     refute establishments(:one).valid?
   end
 
