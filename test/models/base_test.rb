@@ -1,6 +1,8 @@
 require "test_helper"
 
 class BaseTest < ActiveSupport::TestCase
+
+  # should have_many(:establishments)
   
   test "it is created with valid attributes" do 
     assert bases(:one).valid?

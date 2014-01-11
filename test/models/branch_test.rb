@@ -2,6 +2,12 @@ require 'test_helper'
 
 class BranchTest < ActiveSupport::TestCase
 
+  should have_many(:bases)
+  should validate_presence_of(:name)
+  should validate_uniqueness_of(:name)
+  # should ensure_inclusion_of(:name).in_array(["Army", "Navy", "Air Force", "Marines", 
+  #                                             "Coast Guard", "USO", "Recreation Travel", "Space-A"])
+
   test "it is created with valid attributes" do 
     assert branches(:one).valid?
   end
