@@ -1,6 +1,13 @@
 require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
+
+  should belong_to(:base)
+  should have_many(:reviews)
+
+  should validate_presence_of(:username)
+  should validate_presence_of(:email)
+  should validate_uniqueness_of(:username)
   
   test "it is created with valid attributes" do 
     assert users(:one).valid?
