@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140113031534) do
+ActiveRecord::Schema.define(version: 20140113032441) do
 
   create_table "base_establishments", force: true do |t|
     t.integer  "base_id"
@@ -101,7 +101,10 @@ ActiveRecord::Schema.define(version: 20140113031534) do
     t.integer  "file_size"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "establishment_id"
   end
+
+  add_index "photos", ["establishment_id"], name: "index_photos_on_establishment_id"
 
   create_table "reviews", force: true do |t|
     t.integer  "rating"
