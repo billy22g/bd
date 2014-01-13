@@ -4,6 +4,7 @@ class Establishment < ActiveRecord::Base
   has_many :email_addresses
   has_many :websites
   has_many :reviews
+  has_many :photos
   has_many :base_establishments
   has_many :bases, through: :base_establishments
   has_many :establishment_categories

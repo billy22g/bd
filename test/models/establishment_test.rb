@@ -6,6 +6,7 @@ class EstablishmentTest < ActiveSupport::TestCase
   should have_many(:phone_numbers)
   should have_many(:email_addresses)
   should have_many(:reviews)
+  should have_many(:photos)
 
   should have_many(:base_establishments)
   should have_many(:bases)
