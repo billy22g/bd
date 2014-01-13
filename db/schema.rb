@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140111081828) do
+ActiveRecord::Schema.define(version: 20140113031534) do
 
   create_table "base_establishments", force: true do |t|
     t.integer  "base_id"
@@ -94,6 +94,14 @@ ActiveRecord::Schema.define(version: 20140111081828) do
   end
 
   add_index "phone_numbers", ["establishment_id"], name: "index_phone_numbers_on_establishment_id"
+
+  create_table "photos", force: true do |t|
+    t.string   "filename"
+    t.string   "content_type"
+    t.integer  "file_size"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "reviews", force: true do |t|
     t.integer  "rating"
