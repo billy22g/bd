@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140114012614) do
+ActiveRecord::Schema.define(version: 20140114012739) do
 
   create_table "base_establishments", force: true do |t|
     t.integer  "base_id"
@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(version: 20140114012614) do
   end
 
   add_index "photos", ["establishment_id"], name: "index_photos_on_establishment_id"
+  add_index "photos", ["user_id"], name: "index_photos_on_user_id"
 
   create_table "reviews", force: true do |t|
     t.integer  "rating"
