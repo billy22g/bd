@@ -4,6 +4,7 @@ class UserTest < ActiveSupport::TestCase
 
   should belong_to(:base)
   should have_many(:reviews)
+  should have_many(:photos)
 
   should validate_presence_of(:username)
   should validate_presence_of(:email)
