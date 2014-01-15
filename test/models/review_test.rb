@@ -28,4 +28,8 @@ class ReviewTest < ActiveSupport::TestCase
     skip
   end
 
+  test "it does not contain profanity" do 
+    skip
+  end
+
 end
