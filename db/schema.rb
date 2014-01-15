@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140115021014) do
+ActiveRecord::Schema.define(version: 20140115163844) do
 
   create_table "base_establishments", force: true do |t|
     t.integer  "base_id"
@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(version: 20140115021014) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "visible",     default: true
   end
 
   create_table "phone_numbers", force: true do |t|
