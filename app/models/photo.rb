@@ -15,4 +15,8 @@ class Photo < ActiveRecord::Base
   validates_numericality_of(:user_id)
   validates_numericality_of(:file_size)
   validates_numericality_of(:establishment_id)
+
+  def approve
+    self.status = "active"
+  end
 end

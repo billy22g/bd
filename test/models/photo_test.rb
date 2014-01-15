@@ -39,4 +39,10 @@ class PhotoTest < ActiveSupport::TestCase
     photos(:one).status = "active"
     assert photos(:one).valid?
   end
+
+  test "approving it changes the status from pending to active" do 
+    assert_equal "pending", photos(:one).status
+    photos(:one).approve
+    assert_equal "active", photos(:one).status
+  end
 end
