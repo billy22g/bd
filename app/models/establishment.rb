@@ -13,4 +13,9 @@ class Establishment < ActiveRecord::Base
   #validations
   validates :name, presence: true
   validates :state, format: {with: /[A-Z]{2}/}, length: { is: 2 }
+  validates :visible, presence: true
+
+  def take_offline
+    self.visible = false
+  end
 end

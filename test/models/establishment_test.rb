@@ -15,14 +15,19 @@ class EstablishmentTest < ActiveSupport::TestCase
   should have_many(:categories)
 
   should validate_presence_of(:name)
+  should validate_presence_of(:visible)
 
   test "it is created with valid attributes" do 
     assert establishments(:one).valid?
   end
 
-  test "it is invalid without a name" do
-    establishments(:one).update(:name => nil)
-    refute establishments(:one).valid?
+  test "it is visible by default" do 
+    assert establishments(:one).visible?
+  end
+
+  test "taking it offline makes it no longer visible" do 
+    establishments(:one).take_offline
+    refute establishments(:one).visible?
   end
 
   test "it is invalid without being in at least one category" do
