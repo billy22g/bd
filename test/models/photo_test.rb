@@ -30,4 +30,13 @@ class PhotoTest < ActiveSupport::TestCase
   test "that status defaults to pending" do 
     assert_equal "pending", photos(:one).status
   end
+
+  test "that status is either active or pending" do 
+    photos(:one).status = "invalid"
+    refute photos(:one).valid?
+    photos(:one).status = "pending"
+    assert photos(:one).valid?
+    photos(:one).status = "active"
+    assert photos(:one).valid?
+  end
 end

@@ -1,9 +1,6 @@
-
 one: 
   filename: "photo.jpg"
   content_type: "jpg"
-  filesize: 60
+  file_size: 60
   establishment: one
   user: one
-
-two: 
