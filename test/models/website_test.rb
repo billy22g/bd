@@ -8,16 +8,6 @@ class WebsiteTest < ActiveSupport::TestCase
   should validate_presence_of(:description)
   should validate_presence_of(:establishment_id)
 
-  test "it is invalid without a url" do
-    websites(:one).update(:url => nil)
-    refute websites(:one).valid?
-  end
-
-  test "it is invalid without a description" do 
-    websites(:one).update(:description => nil)
-    refute websites(:one).valid?
-  end
-
   test "its description defaults to Website" do 
     website = Website.new
     assert_equal "Website", website.description
