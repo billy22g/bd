@@ -19,4 +19,12 @@ class Photo < ActiveRecord::Base
   def approve
     self.status = "active"
   end
+
+  def take_offline
+    self.status = "pending"
+  end
+
+  def delete_for_good
+    self.destroy
+  end
 end

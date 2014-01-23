@@ -44,5 +44,10 @@ class PhotoTest < ActiveSupport::TestCase
     assert_equal "pending", photos(:one).status
     photos(:one).approve
     assert_equal "active", photos(:one).status
+    photos(:one).take_offline
+    assert_equal "pending", photos(:one).status
+    assert_equal 2, Photo.count
+    photos(:one).delete_for_good
+    assert_equal 1, Photo.count
   end
 end

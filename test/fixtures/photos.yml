@@ -4,3 +4,10 @@ one:
   file_size: 60
   establishment: one
   user: one
+
+two: 
+  filename: "photo2.jpg"
+  content_type: "jpg"
+  file_size: 60
+  establishment: one
+  user: one
