@@ -30,6 +30,9 @@ class EstablishmentTest < ActiveSupport::TestCase
     refute establishments(:one).visible?
   end
 
+  # Below tests need to validate that an establishment must be in at least one category and must be on at least one base
+  # But if the base is deleted we need to know what to do with that establishment (are there any other places where this might be an issue)
+
   test "it is invalid without being in at least one category" do
     skip
   end
