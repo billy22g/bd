@@ -6,4 +6,7 @@ class EmailAddress < ActiveRecord::Base
   validates :email, presence: true
   validates :description, presence: true
   validates :establishment_id, presence: true
+
+  # TODO: This email validation doesn't validate extensions (.xy passes)
+  # validates :email, :email => true
 end

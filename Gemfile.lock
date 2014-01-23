@@ -51,6 +51,8 @@ GEM
     database_cleaner (1.2.0)
     debug_inspector (0.0.2)
     docile (1.1.2)
+    email_validator (1.4.0)
+      activemodel
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
@@ -161,6 +163,7 @@ DEPENDENCIES
   binding_of_caller
   coffee-rails (~> 4.0.0)
   database_cleaner
+  email_validator
   jbuilder (~> 1.2)
   jquery-rails
   minitest-rails

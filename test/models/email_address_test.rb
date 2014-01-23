@@ -19,5 +19,11 @@ class EmailAddressTest < ActiveSupport::TestCase
 
   test "it is invalid without being formatted properly" do 
     skip
+    email_addresses(:one).email = "invalid email"
+    refute email_addresses(:one).valid?
+    email_addresses(:one).email = "billy@miltraveler.com"
+    assert email_addresses(:one).valid?
+    email_addresses(:one).email = "love@invalidemail.xy"
+    refute email_addresses(:one).valid?
   end
 end
