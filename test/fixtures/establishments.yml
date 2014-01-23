@@ -19,3 +19,14 @@ two:
   latitude: 38.9999
   longitude: 117.1123
   description: "It's a pretty cool exchange."
+
+three:
+  name: "Sample Gym"
+  street1: "456 Wonder St."
+  street2: "Bldg 976"
+  city: "Camp Pendleton"
+  state: "CA"
+  zipcode: 92113
+  latitude: 38.9999
+  longitude: 117.1123
+  description: "It's a pretty cool gym."

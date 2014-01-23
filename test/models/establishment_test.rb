@@ -34,8 +34,16 @@ class EstablishmentTest < ActiveSupport::TestCase
     skip
   end
 
-  test "it can be included in more than one category" do 
+  test "it is invalid without being on at least one base" do 
     skip
+  end
+
+  test "it can be included in more than one category" do 
+    assert_equal 2, establishments(:one).categories.count
+  end
+
+  test "it can be included on more than one base" do 
+    assert_equal 2, establishments(:one).bases.count
   end
 
   test "the state is invalid unless it is two capital letters" do 

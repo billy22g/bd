@@ -29,6 +29,10 @@ class BaseTest < ActiveSupport::TestCase
     assert_equal "Camp Pendleton", bases(:one).name
   end
 
+  test "it should be able to have many establishments" do
+    assert_equal 3, bases(:one).establishments.count
+  end
+
   test "it is invalid unless state is 2 capital letters" do 
     bases(:one).update(:state => "BLAH")
     refute bases(:one).valid?
