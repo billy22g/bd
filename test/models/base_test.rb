@@ -16,6 +16,11 @@ class BaseTest < ActiveSupport::TestCase
   should validate_presence_of(:longitude)
   should validate_numericality_of(:longitude)
 
+  should validate_numericality_of(:latitude).is_greater_than(-90)
+  should validate_numericality_of(:latitude).is_less_than(90)
+  should validate_numericality_of(:longitude).is_greater_than(-180)
+  should validate_numericality_of(:longitude).is_less_than(180)
+
   # should ensure_length_of(:zipcode).is_equal_to(5)
 
   

@@ -20,6 +20,9 @@ class Base < ActiveRecord::Base
   validates :longitude, presence: true
   validates_numericality_of :longitude
 
+  validates :latitude , numericality: { greater_than: -90, less_than: 90 }
+  validates :longitude, numericality: { greater_than: -180, less_than: 180 }
+
   validates :branch_id, presence: true
   
 end
