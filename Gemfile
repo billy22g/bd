@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'thin'
 gem 'email_validator'
+gem 'turbolinks'
 
 group :development, :test do
   gem 'better_errors'
