@@ -1,0 +1,11 @@
+<h1><%= @branch.name %> Bases</h1>
+
+<ul>
+  <% @bases.each do |base| %>
+    <li>
+      <%= link_to base.name, base_path(base) %>
+      
+    </li>
+
+  <% end %>
+</ul>
