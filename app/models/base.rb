@@ -26,7 +26,7 @@ class Base < ActiveRecord::Base
   validates :branch_id, presence: true
 
   def to_param
-    "#{name.downcase}"
+    name.parameterize
   end
   
 end

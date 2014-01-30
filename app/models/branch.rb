@@ -9,7 +9,7 @@ class Branch < ActiveRecord::Base
 
 
   def to_param
-    "#{name.downcase}"
+    name.parameterize
   end
 
 end
