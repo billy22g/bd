@@ -24,5 +24,9 @@ class Base < ActiveRecord::Base
   validates :longitude, numericality: { greater_than: -180, less_than: 180 }
 
   validates :branch_id, presence: true
+
+  def to_param
+    "#{name.downcase}"
+  end
   
 end
