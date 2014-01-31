@@ -2,7 +2,7 @@
 
   <ul>
   <% @base.establishments.each do |establishment| %>
-    <li><%= establishment.name %></li>
+    <li><%= link_to establishment.name, establishment_path(establishment) %></li>
   <% end %>
 
   </ul>
