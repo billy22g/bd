@@ -1,1 +1,10 @@
-<h1><%= @base.name %>
+<h1><%= @base.name %></h1>
+
+  <ul>
+  <% @base.establishments.each do |establishment| %>
+    <li><%= establishment.name %></li>
+  <% end %>
+
+  </ul>
+
+
