@@ -1,8 +1,15 @@
 Bd::Application.routes.draw do
 
   resources :branches
+  get '/army', to: "branches#show", defaults: { id: "army" }, as: :army
+  get '/navy', to: "branches#show", defaults: { id: "navy" }, as: :navy
+  get '/navy', to: "branches#show", defaults: { id: "navy" }, as: :marines
+
+
   resources :bases, only: ["show"]
   resources :establishments, only: ["show"]
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -23,7 +23,7 @@ class EmailAddressTest < ActiveSupport::TestCase
     refute email_addresses(:one).valid?
     email_addresses(:one).email = "billy@miltraveler.com"
     assert email_addresses(:one).valid?
-    email_addresses(:one).email = "love@invalidemail.xy"
+    email_addresses(:one).email = "hello@invalidemail.in.gov"
     refute email_addresses(:one).valid?
   end
 end
